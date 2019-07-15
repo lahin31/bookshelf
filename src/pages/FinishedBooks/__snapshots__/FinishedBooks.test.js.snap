@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<DocumentFragment>
+  <div
+    class="all_books_wrapper css-hcdvcr"
+  >
+    <div
+      class="title_wrapper"
+    >
+      <h1
+        class="css-h2902l"
+      >
+        Finished Books
+      </h1>
+    </div>
+    <div
+      class="all_books"
+    >
+      <input
+        class="css-1lcubup"
+        placeholder="Search by Book Name"
+        type="text"
+        value=""
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

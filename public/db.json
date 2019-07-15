@@ -1,0 +1,39 @@
+{
+  "books": [{
+      "id": 1,
+      "name": "The Hunger Games",
+      "author": "Suzanne Collins",
+      "published_date": "31/10/1994",
+      "featured_image": "./images/the_hunger_games.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis aliquet urna, quis ultrices elit. Ut ac auctor nisl. Vivamus metus metus, dapibus et elementum a, vehicula condimentum mauris.",
+      "reviews": [],
+      "ratings": 5,
+      "readingList": false,
+      "complete": false
+    },
+    {
+      "id": 2,
+      "name": "Harry Potter and the Order of the Phoenix",
+      "author": "J.K. Rowling,  Mary GrandPré (Illustrator)",
+      "published_date": "31/10/1994",
+      "featured_image": "./images/harry_poter.jpg",
+      "description": "There is a door at the end of a silent corridor. And it’s haunting Harry Pottter’s dreams. Why else would he be waking in the middle of the night, screaming in terror?",
+      "reviews": [],
+      "ratings": 4.49,
+      "readingList": false,
+      "complete": false
+    },
+    {
+      "id": 3,
+      "name": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "published_date": "31/10/1994",
+      "featured_image": "./images/to_kill_a_mocking_bird.jpg",
+      "description": "The unforgettable novel of a childhood in a sleepy Southern town and the crisis of conscience that rocked it, To Kill A Mockingbird became both an instant bestseller and a critical success when it was first published in 1960. It went on to win the Pulitzer Prize in 1961 and was later made into an Academy Award-winning film, also a classic.",
+      "reviews": [],
+      "ratings": 4.27,
+      "readingList": false,
+      "complete": false
+    }
+  ]
+}
