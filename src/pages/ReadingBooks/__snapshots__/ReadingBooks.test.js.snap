@@ -10,15 +10,17 @@ exports[`renders 1`] = `
     >
       <h1
         class="css-h2902l"
+        data-testid="pageTitle"
       >
         Reading Books
       </h1>
     </div>
     <div
       class="all_books"
+      data-testid="all_books"
     >
       <input
-        class="css-1lcubup"
+        class="css-13ywnoh-BookSearchField"
         placeholder="Search by Book Name"
         type="text"
         value=""

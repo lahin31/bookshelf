@@ -25,7 +25,6 @@ class App extends Component {
     let books = [...this.state.readingBooks];
     let indexOfDeletedBook = books.findIndex(book => book.id === id);
     books[indexOfDeletedBook].readingList = false;
-    console.log(complete)
     if(complete) {
       books[indexOfDeletedBook].complete = true;
     }
@@ -58,14 +57,14 @@ class App extends Component {
           <nav className="vertical_navbar">
             <div
               css={css`
-              position: sticky;
-              top: 0;
-            `}>
+                position: sticky;
+                top: 0;
+              `} 
+            >
               <NavLink to="/">All Available Books</NavLink>
               <NavLink to="/reading_books">Reading Books({readingBooks.length > 0 ? readingBooks.length : 0})</NavLink>
               <NavLink to="/finished_books">Finished Books({finishedReadingBooks.length > 0 ? finishedReadingBooks.length : 0})</NavLink>
-            </div>
-            
+            </div> 
           </nav>
           <div className="vertical_lists" css={css`
             flex: 2;

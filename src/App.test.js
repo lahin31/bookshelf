@@ -1,9 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import { render, cleanup } from "@testing-library/react";
+import '@testing-library/jest-dom/extend-expect'
+import App from "./App";
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+afterEach(cleanup);
+
+// making a snapshot
+it("renders", () => {
+  const { asFragment } = render(<App />);
+  expect(asFragment()).toMatchSnapshot();
+});
+
+it("tests the length of the two state", () => {
+  const ref = React.createRef();
+  render(<App ref={ref} />);
+  expect(ref.current.state.readingBooks.length).toEqual(0);
+  expect(ref.current.state.finishedReadingBooks.length).toEqual(0);
 });

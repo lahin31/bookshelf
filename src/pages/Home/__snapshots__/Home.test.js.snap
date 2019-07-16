@@ -20,7 +20,7 @@ exports[`renders 1`] = `
       data-testid="all_books"
     >
       <input
-        class="css-1lcubup"
+        class="css-13ywnoh-BookSearchField"
         placeholder="Search by Book Name"
         type="text"
         value=""

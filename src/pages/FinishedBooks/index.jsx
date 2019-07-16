@@ -30,9 +30,9 @@ class FinishedBooks extends Component {
               className="all_books_wrapper"
             >
               <div className="title_wrapper">
-                <Title>Finished Books</Title>
+                <Title data-testid="pageTitle">Finished Books</Title>
               </div>
-              <div className="all_books">
+              <div className="all_books" data-testid="all_books">
                 <BookSearchField
                   value={searchedName}
                   onChange={this.updateSearchedName}

@@ -10,3 +10,12 @@ it("renders", () => {
   expect(asFragment()).toMatchSnapshot();
 });
 
+it("tests the page title", () => {
+  const { getByTestId } = render(<FinishedBooks />);
+  expect(getByTestId('pageTitle')).toHaveTextContent("Finished Books");
+});
+
+it("tests the all_books dom attr not empty", () => {
+  const { getByTestId } = render(<FinishedBooks />);
+  expect(getByTestId('all_books')).not.toBeEmpty();
+});
