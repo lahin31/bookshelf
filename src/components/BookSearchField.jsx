@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React, { Component } from "react";
 import { jsx, css } from "@emotion/core";
 
 const BookSearchField = props => {

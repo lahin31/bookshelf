@@ -48,7 +48,9 @@ class Home extends Component {
                   value={selectedName}
                   onChange={this.updateSelectedName}
                 />
-                {books.map((book, i) => {
+                {
+                  // eslint-disable-next-line
+                  books.map((book, i) => {
                   if (
                     book.name.toLowerCase().includes(selectedName.toLowerCase())
                   ) {

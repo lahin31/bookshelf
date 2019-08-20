@@ -38,6 +38,7 @@ class FinishedBooks extends Component {
                   onChange={this.updateSearchedName}
                 />
                 {val.finishedReadingBooks &&
+                  // eslint-disable-next-line
                   val.finishedReadingBooks.map((book, i) => {
                     if (
                       book.name

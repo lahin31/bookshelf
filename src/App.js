@@ -1,12 +1,13 @@
 /** @jsx jsx */
 import { Component } from 'react';
-import { Router, Link } from "@reach/router";
+import { Router } from "@reach/router";
 import { jsx, css } from "@emotion/core";
 import './App.css';
 import BookContext from "./context/book-context";
 import Home from "./pages/Home";
 import ReadingBooks from "./pages/ReadingBooks";
 import FinishedBooks from './pages/FinishedBooks';
+import Navbar from './components/Navbar'
 
 class App extends Component {
   state = {
@@ -54,18 +55,10 @@ class App extends Component {
         addBookToFinished: this.addBookToFinished
       }}>
         <div className="container">
-          <nav className="vertical_navbar">
-            <div
-              css={css`
-                position: sticky;
-                top: 0;
-              `} 
-            >
-              <NavLink to="/">All Available Books</NavLink>
-              <NavLink to="/reading_books">Reading Books({readingBooks.length > 0 ? readingBooks.length : 0})</NavLink>
-              <NavLink to="/finished_books">Finished Books({finishedReadingBooks.length > 0 ? finishedReadingBooks.length : 0})</NavLink>
-            </div> 
-          </nav>
+          <Navbar
+            readingBooks={readingBooks}
+            finishedReadingBooks={finishedReadingBooks}
+          />
           <div className="vertical_lists" css={css`
             flex: 2;
           `}>
@@ -80,18 +73,5 @@ class App extends Component {
     );
   }
 }
-
-const NavLink = props => (
-  <Link
-    {...props}
-    getProps={({ isCurrent }) => {
-      return {
-        style: {
-          color: isCurrent ? "red" : "blue"
-        }
-      };
-    }}
-  />
-);
 
 export default App;

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, { Component } from "react";
+import { Component } from "react";
 import { jsx, css } from "@emotion/core";
 import BookContext from "../../context/book-context";
 import BookSearchField from "../../components/BookSearchField";
@@ -38,6 +38,7 @@ class ReadingBooks extends Component {
                   onChange={this.updateSearchedName}
                 />
                 {val.readingBooks &&
+                  // eslint-disable-next-line
                   val.readingBooks.map((book, i) => {
                     if (
                       book.name
@@ -72,6 +73,7 @@ class ReadingBooks extends Component {
                               className="book_title_header"
                               css={css`
                                 display: flex;
+                                justify-content: space-between;
                               `}
                             >
                               <h2
@@ -82,47 +84,48 @@ class ReadingBooks extends Component {
                               >
                                 <strong>{book.name}</strong>
                               </h2>
-
-                              <button
-                                css={css`
-                                  border-color: #fff;
-                                  box-shadow: none;
-                                  background-color: #4caf50;
-                                  border: none;
-                                  color: white;
-                                  padding: 10px 15px;
-                                  text-align: center;
-                                  text-decoration: none;
-                                  display: inline-block;
-                                  font-size: 16px;
-                                  cursor: pointer;
-                                  flex: 1;
-                                `}
-                                onClick={() => val.addBookToFinished(book)}
-                              >
-                                Add to Finished List
-                              </button>
-                              <button
-                                css={css`
-                                  border-color: #fff;
-                                  box-shadow: none;
-                                  background-color: rgb(255, 0, 0);
-                                  border: none;
-                                  color: white;
-                                  padding: 10px 15px;
-                                  text-align: center;
-                                  text-decoration: none;
-                                  display: inline-block;
-                                  font-size: 16px;
-                                  cursor: pointer;
-                                  flex: 1;
-                                `}
-                                onClick={() =>
-                                  val.removeBookFromReading(book.id)
-                                }
-                              >
-                                Remove
-                              </button>
+                              <div>
+                                <button
+                                  css={css`
+                                    border-color: #fff;
+                                    box-shadow: none;
+                                    background-color: #4caf50;
+                                    border: none;
+                                    color: white;
+                                    padding: 10px 15px;
+                                    text-align: center;
+                                    text-decoration: none;
+                                    display: inline-block;
+                                    font-size: 16px;
+                                    cursor: pointer;
+                                    flex: 1;
+                                  `}
+                                  onClick={() => val.addBookToFinished(book)}
+                                >
+                                  Add to Finished List
+                                </button>
+                                <button
+                                  css={css`
+                                    border-color: #fff;
+                                    box-shadow: none;
+                                    background-color: rgb(255, 0, 0);
+                                    border: none;
+                                    color: white;
+                                    padding: 10px 15px;
+                                    text-align: center;
+                                    text-decoration: none;
+                                    display: inline-block;
+                                    font-size: 16px;
+                                    cursor: pointer;
+                                    flex: 1;
+                                  `}
+                                  onClick={() =>
+                                    val.removeBookFromReading(book.id)
+                                  }
+                                >
+                                  Remove
+                                </button>
+                              </div>
                             </div>
                             <div className="rating">
                               <span
